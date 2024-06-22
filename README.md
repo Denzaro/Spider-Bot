@@ -7,3 +7,5 @@ Spider bot go brrr
 
 #Text Editor: Vscode  
 	Extension: IO Platform  
+
+#Mr.Ha's note: https://docs.google.com/document/d/1bUXYWwZecLQ7FMZrLrwAvRisxuho-gHDBLazFC3kmm4/edit?usp=sharing  
