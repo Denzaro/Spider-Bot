@@ -147,7 +147,7 @@ void loop()
   Serial.println("Hand wave");
   hand_wave(3);
   delay(2000);
-  Serial.println("Hand wave");
+  Serial.println("Hand shake");
   hand_shake(3);
   delay(2000);  
   Serial.println("Sit");
