@@ -98,11 +98,11 @@ void setup()
       site_now[i][j] = site_expect[i][j];
     }
   }
-  //start servo service
-  // FlexiTimer2::set(20, servo_service);
-  // FlexiTimer2::start();
-  // Serial.println("Servo service started");
-  //initialize servos
+  start servo service
+  FlexiTimer2::set(20, servo_service);
+  FlexiTimer2::start();
+  Serial.println("Servo service started");
+  initialize servos
   servo_attach();
   Serial.println("Servos initialized");
   Serial.println("Robot initialization Complete");
