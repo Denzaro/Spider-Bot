@@ -3,7 +3,7 @@
 BluetoothSerial SerialBT;
 
 const int ledPin = 2;
-char c;
+char c, temp;
 void setup(){
   SerialBT.begin("ESP32-Bluetooth");//Tên Bluetooth ESP32, có thể thiết lập tên khác
   pinMode(ledPin, OUTPUT);
@@ -58,11 +58,31 @@ void loop(){
         Serial.println("NO");
         Serial.println(c);
     }
-  }else { //Nếu không có gửi kí tự mới từ bluetooth
-    c = 'N'; // 'N' là giá trị mặc định
-    Serial.println("KHONG CO DU LIEU");
-    Serial.println(c);
-    delay(2000);
-    digitalWrite(ledPin, LOW);
+  }else{
+    switch(c){
+      case 'u':
+        Serial.println("UP");
+        Serial.println(c);
+        digitalWrite(ledPin, HIGH);
+        delay(1000);
+        break;
+      case 'd':
+        Serial.println("DOWN");
+        Serial.println(c);
+        digitalWrite(ledPin, LOW);
+        break;
+      case 'l':
+        Serial.println("LEFT");
+        Serial.println(c);
+        digitalWrite(ledPin, HIGH);
+      case 'r':
+        Serial.println("RIGHT");
+        Serial.println(c);
+        digitalWrite(ledPin, LOW);
+        break;
+      default:
+        Serial.println("NO");
+        Serial.println(c);
+        delay(1000);}
   }
 }
